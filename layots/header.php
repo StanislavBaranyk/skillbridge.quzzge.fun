@@ -29,7 +29,7 @@
 
                             foreach ($headerNavItems as $headerNavItem) {
                                 echo ' <li class="li-item">
-                                <span class="transparent-btn  active-nav">' . $headerNavItem . '</span>
+                                <a class="transparent-btn" style="text-decoration: none" href="/course.php">' . $headerNavItem . '</a>
                             </li>';
                             }
                             ?>
