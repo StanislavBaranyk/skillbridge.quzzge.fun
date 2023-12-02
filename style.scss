@@ -1267,9 +1267,11 @@ h1, h2, h3, h4, h5, h6, p, span, {
 
   .benefits {
     padding-top: 100px;
+
     .container {
       .section-items {
         gap: 60px;
+
         .card-items {
 
           .card-item {
@@ -1389,6 +1391,283 @@ h1, h2, h3, h4, h5, h6, p, span, {
   }
 
 }
+
+
+// course-page
+
+section {
+  padding-top: 50px;
+}
+
+.course-page-welcome-section {
+
+  .container {
+
+    .section-header {
+      padding-bottom: 30px;
+      border-bottom: 1px solid #E4E4E7;
+
+      .h3 {
+        line-height: 150%;
+      }
+    }
+  }
+}
+
+.course-page-course-card {
+
+  .container {
+
+    .section-items {
+      @include flexCol;
+      align-items: center;
+      gap: 20px;
+
+      .card-item {
+        @include flexCol;
+        gap: 24px;
+        align-items: start;
+        padding: 24px;
+        max-width: 358px;
+
+
+        .card-header {
+          .header-description {
+            margin-bottom: 20px;
+
+            .h5 {
+              margin-bottom: 6px;
+              font-size: 18px;
+            }
+          }
+
+          .section-btn {
+            .transparent-btn {
+              padding: 14px 16px;
+            }
+          }
+        }
+
+        .card-picture {
+          @include flexRow;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: calc(33.333% - 6px);
+            height: 100px;
+            border-radius: 4px;
+          }
+        }
+
+        .person-description {
+          @include flexCol;
+          gap: 16px;
+          margin-bottom: 20px;
+
+          .person-experience {
+            @include flexRow;
+            gap: 8px;
+
+            .transparent-btn {
+              padding: 8px 12px;
+            }
+          }
+        }
+
+        .curriculum {
+          width: 100%;
+
+          .curriculum-header {
+            padding: 14px 20px;
+            border: 1px solid #F1F1F3;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
+          }
+
+
+          .curriculum-items {
+            width: 100%;
+            @include flexCol;
+            gap: 20px;
+            padding: 24px;
+            border: 1px solid #F1F1F3;
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+
+            .curriculum-item:not(:last-child) {
+              padding-bottom: 20px;
+              border-bottom: 1px solid #F1F1F3;
+            }
+
+            .curriculum-item {
+              .h1 {
+                font-size: 30px;
+                margin-bottom: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+
+
+  .course-page-course-card .container .section-items {
+
+
+
+    .card-item {
+      max-width: none;
+
+      .card-header {
+        @include flexRow;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .section-btn {
+
+          .transparent-btn {
+            padding: 8px 12px;
+          }
+        }
+
+        .header-description {
+          margin-bottom: 0;
+
+          .h5 {
+          }
+        }
+      }
+
+      .card-picture {
+        width: 100%;
+        gap: 20px;
+        img {
+          width: calc(33.333% - 10px);
+          height: 30%;
+        }
+      }
+
+      .curriculum {
+
+        .curriculum-header {
+          padding: 12px 8px;
+        }
+
+        .curriculum-items {
+          flex-direction: row;
+          gap: 20px;
+          padding: 12px;
+
+          .curriculum-item:not(:last-child) {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+}
+@media screen and (min-width: 992px) {
+
+  .course-page-course-card .container .section-items .card-item .curriculum .curriculum-items {
+    justify-content: space-between;
+
+    .curriculum-item {
+      width: 20%;
+      max-width: 160px;
+    }
+  }
+
+  .course-page-course-card .container .section-items .card-item .card-header .header-description .h5 {
+    font-size: 20px;
+  }
+
+  .course-page-course-card .container .section-items .card-item .person-description {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .person {
+      .h5 {
+        font-size: 18px;
+      }
+    }
+
+    .person-experience {
+    }
+
+    .transparent-btn {
+      padding: 12px;
+      border: none;
+    }
+  }
+
+  .course-page-course-card .container .section-items .card-item .curriculum {
+
+    .curriculum-header {
+      border: none;
+
+      .h5 {
+        font-size: 18px;
+      }
+
+    }
+
+    .curriculum-items {
+      border: none;
+    }
+  }
+
+  .course-page-welcome-section .container .section-header {
+    @include flexRow;
+    gap: 80px;
+
+    .h3 {
+      margin-bottom: 0;
+      line-height: 150%;
+    }
+
+    .section-item {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .header .container .section-items .header-nav {
+    padding: 16px 60px 20px;
+  }
+
+  .course-page-welcome-section .container .section-header {
+    padding: 0 60px 40px;
+
+  }
+}
+
+@media screen and (min-width: 1400px) {
+
+  section {
+    padding-top: 80px;
+  }
+
+  .container {
+    max-width: 1400px;
+  }
+
+  .course-page-welcome-section .container .section-header {
+    .h3 {
+      font-size: 38px;
+    }
+  }
+}
+
 
 
 
