@@ -28,23 +28,28 @@
                             $headerNavItems = [
                                 [
                                     'linkText' => 'Home',
-                                    'linkUrl' => '/index.php'
+                                    'linkUrl' => '/index.php',
+                                    'active' => $_SERVER['PHP_SELF'] === '/index.php'
                                 ],
                                 [
                                     'linkText' => 'Courses',
-                                    'linkUrl' => '/course-page.php'
+                                    'linkUrl' => '/course-page.php',
+                                    'active' => $_SERVER['PHP_SELF'] === '/course-page.php'
                                 ],
                                 [
                                     'linkText' => 'About Us',
-                                    'linkUrl' => '/about-us-page.php'
+                                    'linkUrl' => '/about-us-page.php',
+                                    'active' => $_SERVER['PHP_SELF'] === '/about-us-page.php'
                                 ],
                                 [
                                     'linkText' => 'Pricing',
-                                    'linkUrl' => '/pricing-page.php'
+                                    'linkUrl' => '/pricing-page.php',
+                                    'active' => $_SERVER['PHP_SELF'] === '/pricing-page.php'
                                 ],
                                 [
                                     'linkText' => 'Contact',
-                                    'linkUrl' => 'contact-page.php'
+                                    'linkUrl' => 'contact-page.php',
+                                    'active' => $_SERVER['PHP_SELF'] === 'contact-page.php'
                                 ],
                             ];
 
@@ -52,7 +57,7 @@
 
 
                                 echo ' <li class="li-item">
-                                <a class="transparent-btn '; if ($_SERVER['PHP_SELF'] === $headerNavItem['linkUrl']) {
+                                <a class="transparent-btn '; if ($headerNavItem['active']) {
                                     echo 'page-active';
                                 } echo '" style="text-decoration: none" href="' . $headerNavItem['linkUrl'] . '">' . $headerNavItem['linkText'] . '</a>
                             </li>';
