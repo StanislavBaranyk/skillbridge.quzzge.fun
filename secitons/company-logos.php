@@ -212,7 +212,7 @@
 
 
             foreach ($cards as $card) {
-                echo '<div class="section-item ' . $card['delete-class'] . '">' . $card['cardContent'] . '</div>';
+                echo '<div class="section-item ' . $card['delete-class'] . '"><a class="company-logos-link" href="#">' . $card['cardContent'] . '</a></div>';
             }
             ?>
 

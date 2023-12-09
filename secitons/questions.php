@@ -50,7 +50,6 @@
                         'process' => 'Enrollment Process for Different Courses',
                         'number' => '5',
                         'classCollapsed' => 'collapsed',
-                        'deleteMobile' => 'delete-mobile',
                     ],
                 ];
 
