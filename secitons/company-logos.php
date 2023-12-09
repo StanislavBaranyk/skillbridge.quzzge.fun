@@ -136,9 +136,11 @@
                 'netflix'
             ];
 
-            foreach ($logos as $logo) { ?>
+            foreach ($logos as $logo) {
+                $imgPath = "/images/company-logos/{$logo}.svg";
+                ?>
                 <div class="section-item">
-                    <img src="/images/company-logos/<?php echo $logo; ?>.svg" alt="<?php echo $logo; ?>">
+                    <img src="<?php echo $imgPath; ?>" alt="<?php echo $logo; ?>">
                 </div>
             <?php } ?>
 
